@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html dir="rtl" lang="he-IL">
 <head>
   <meta charset="UTF-8">
   <meta name="keywords" content="Start-project" />
@@ -9,6 +9,11 @@
   <meta name="format-detection" content="telephone=no" />
 
   <title>Start-project</title>
+
+  <!-- fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
 
   <!-- magnific -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
@@ -20,6 +25,58 @@
 <div class="wrapper" id="wrapper">
   <header class="header" id="header">
     <div class="container">
-      <h1>header</h1>
+      <div class="header-content">
+        <button class="header-burger">
+          <img src="./images/burger-icon.svg" class="open" alt="">
+          <img src="./images/burger-close.svg" class="close" alt="">
+        </button>
+        <div class="header-content-right burger">
+          <nav class="header-nav">
+            <ul>
+              <li><a href="#" class="active">בית</a></li>
+              <li><a href="#">אודות</a></li>
+              <li><a href="#">השירותים שלנו</a></li>
+              <li><a href="#">סוגי קמפיינים</a></li>
+              <li><a href="#">צור קשר</a></li>
+            </ul>
+          </nav>
+
+          <div class="ui-phone">
+            <div class="ui-phone-icon">
+              <img src="./images/whats-up.svg" alt="">
+            </div>
+
+            <a href="#" class="ui-phone-link">054-7625956</a>
+          </div>
+
+          <div class="header-contacts">
+            <div class="header-contact">
+              <div class="header-contact-icon">
+                <img src="./images/phone-icon.svg" alt="">
+              </div>
+              <a href="#" class="header-contact-link">
+                054-7625956
+                <img src="./images/whats-up.svg" alt="">
+              </a>
+            </div>
+            <div class="header-contact">
+              <div class="header-contact-icon">
+                <img src="./images/email-icon.svg" alt="">
+              </div>
+              <a href="#" class="header-contact-link">boris@websystem.co.il</a>
+            </div>
+            <div class="header-contact">
+              <div class="header-contact-icon">
+                <img src="./images/geo-icon.svg" alt="">
+              </div>
+              <a href="#" class="header-contact-link">שאול המלך 16, קרית אונו</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="header-logo">
+          <img src="./images/header-logo.svg" alt="">
+        </div>
+      </div>
     </div>
   </header>

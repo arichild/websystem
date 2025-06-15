@@ -93,4 +93,11 @@ $( document ).ready(function() {
       })
     });
   }
+
+  // burger
+  $('.header-burger').on('click', function() {
+    $(this).toggleClass('active');
+    $('.burger').toggleClass('active');
+    $('html').toggleClass('active');
+  });
 });
