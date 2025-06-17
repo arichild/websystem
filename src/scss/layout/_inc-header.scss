@@ -1,6 +1,7 @@
 .header {
   padding-top: 22px;
   padding-bottom: 26px;
+  border: 1px solid transparent;
 
   &-content {
     display: flex;
@@ -54,7 +55,7 @@
   &-contact {
     position: relative;
     padding-right: 72px;
-    height: 64px;
+    min-height: 64px;
     line-height: 64px;
     border-bottom: 1px solid #DDE6EA;
 
@@ -198,8 +199,11 @@
 
   @media(max-width: 768.99px) {
     padding: 20px 0;
-    border-bottom: 1px solid #DDE6EA;
-    position: relative;
+
+    &.active {
+      border-bottom: 1px solid #DDE6EA;
+      position: relative;
+    }
 
     &-content {
       gap: 0;
@@ -269,4 +273,27 @@
       display: none;
     }
   }
+}
+
+[dir="ltr"] .header-contact {
+  padding-left: 72px;
+  padding-right: 0;
+}
+
+[dir="ltr"] .header-contact-icon {
+  left: 0;
+  right: auto;
+}
+
+[dir="ltr"] .header-contact-link img {
+  right: -45px;
+  left: auto;
+}
+
+[dir="ltr"] .header-content-right {
+  flex-direction: row-reverse;
+}
+
+[dir="ltr"] .header-content {
+  flex-direction: row-reverse;
 }

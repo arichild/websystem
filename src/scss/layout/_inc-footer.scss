@@ -20,8 +20,8 @@
     }
 
     &-bottom {
-      text-align: center;
-      max-width: 195px;
+      text-align: left;
+      max-width: 235px;
       margin: 0 auto;
 
       span {
@@ -90,6 +90,10 @@
     padding-bottom: 20px;
 
     &-content {
+      &-bottom {
+        max-width: none;
+        text-align: center;
+      }
       &-top {
         flex-direction: column-reverse;
         justify-content: normal;
@@ -115,5 +119,11 @@
         margin-bottom: 40px;
       }
     }
+  }
+}
+
+[dir="ltr"] .footer-content-top {
+  @media(min-width: 1024.99px) {
+    flex-direction: row-reverse;
   }
 }
