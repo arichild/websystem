@@ -117,6 +117,8 @@ $( document ).ready(function() {
   const splideBrands = document.querySelector('.splide-brands')
   const splideAdvices = document.querySelector('.splide-advice')
   const splideReviews = document.querySelector('.splide-reviews')
+  const splideServices = document.querySelector('.splide-services')
+  const splideGoals = document.querySelector('.splide-goals')
   const splideUiSlider = document.querySelectorAll('.ui-card-slider')
 
   if(splideBrands) {
@@ -188,6 +190,50 @@ $( document ).ready(function() {
     }).mount();
   }
 
+  if(splideServices) {
+    new Splide( splideServices, {
+      direction: 'rtl',
+      destroy: true,
+      perPage: 2,
+      pagination: false,
+      arrows: false,
+
+      breakpoints: {
+        768: {
+          destroy: false,
+          gap: 10,
+          arrows: true,
+        },
+        576: {
+          perPage: 1,
+          gap: 20
+        },
+      }
+    }).mount();
+  }
+
+  if(splideGoals) {
+    new Splide( splideGoals, {
+      direction: 'rtl',
+      destroy: true,
+      perPage: 2,
+      pagination: false,
+      arrows: false,
+
+      breakpoints: {
+        768: {
+          destroy: false,
+          gap: 10,
+          arrows: true,
+        },
+        576: {
+          perPage: 1,
+          gap: 20
+        },
+      }
+    }).mount();
+  }
+
   if(splideUiSlider.length) {
     for ( var i = 0; i < splideUiSlider.length; i++ ) {
       new Splide( splideUiSlider[ i ], {
@@ -228,16 +274,35 @@ $( document ).ready(function() {
   // ui cards
   const uiCards = document.querySelectorAll('.ui-card-btn')
 
-  if(uiCards.length) {
+  // if(uiCards.length) {
+  //   uiCards.forEach(el => {
+  //     el.addEventListener('click', (e) => {
+  //       const parent = e.target.closest('.ui-card-item')
+
+  //       parent.classList.toggle('active')
+  //     })
+  //   })
+  // }
+
+  if (uiCards.length) {
     uiCards.forEach(el => {
       el.addEventListener('click', (e) => {
         const parent = e.target.closest('.ui-card-item')
 
-        parent.classList.toggle('active')
+        if (parent.classList.contains('active')) {
+          parent.classList.remove('active')
+        } else {
+          document.querySelectorAll('.ui-card-item.active').forEach(item => {
+            item.classList.remove('active')
+          })
+          parent.classList.add('active')
+        }
       })
     })
   }
 
+
+  // anchro links
   const anchorLinks = document.querySelectorAll('.anchor-link')
 
   anchorLinks.forEach(el => {

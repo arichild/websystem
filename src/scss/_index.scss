@@ -90,6 +90,10 @@
     min-height: 182px;
     box-shadow: 0 2px 3px 0 rgba(6, 50, 111, 0.1), 0 6px 6px 0 rgba(6, 50, 111, 0.09), 0 14px 8px 0 rgba(6, 50, 111, 0.05), 0 25px 10px 0 rgba(6, 50, 111, 0.01), 0 39px 11px 0 rgba(6, 50, 111, 0);
 
+    &.white {
+      background-color: #fff;
+    }
+
     &-header {
       font-weight: 700;
       font-size: 22px;
